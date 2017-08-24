@@ -2,10 +2,9 @@ import argparse
 
 from nelson.gtomscs import submit
 
-LATE_POLICY = """Late Policy:
-  \"I have read the late policy for CS6476. I understand that only my last
-  commit before the late submission deadline will be accepted and that late
-  penalties apply if any part of the assignment is submitted late.\"
+LATE_POLICY = """Late Assignments Policy:
+  \"I have read the late assignments policy for CS6476. I understand that only my last
+  commit before the deadline will be accepted.\"
 """
 
 HONOR_PLEDGE = "Honor Pledge:\n\n  \"I have neither given nor received aid on this assignment.\"\n"
@@ -15,7 +14,7 @@ def require_pledges():
     print(LATE_POLICY)
     ans = raw_input("Please type 'yes' to agree and continue>")
     if ans != "yes":
-        raise RuntimeError("Late policy not accepted.")
+        raise RuntimeError("Late Assignments policy not accepted.")
 
     print
     print(HONOR_PLEDGE)
