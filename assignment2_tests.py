@@ -10,7 +10,7 @@ algorithms.
 import cv2
 import unittest
 
-import assignment1
+import assignment2
 
 
 class TestTrafficLight(unittest.TestCase):
@@ -25,7 +25,7 @@ class TestTrafficLight(unittest.TestCase):
     def test_output(self):
         test_image = cv2.imread('input_images/test_images/simple_tl.png')
         radii_range = range(10, 30, 1)
-        result = assignment1.traffic_light_detection(test_image, radii_range)
+        result = assignment2.traffic_light_detection(test_image, radii_range)
 
         self.assertTrue(result is not None, "Output is NoneType.")
         self.assertEqual(2, len(result), "Output should be a tuple of 2 elements.")
@@ -45,7 +45,7 @@ class TestTrafficLight(unittest.TestCase):
     def test_simple_tl(self):
         test_image = cv2.imread('input_images/test_images/simple_tl_test.png')
         radii_range = range(10, 30, 1)
-        coords, state = assignment1.traffic_light_detection(test_image, radii_range)
+        coords, state = assignment2.traffic_light_detection(test_image, radii_range)
 
         self.assertTrue(coords[0] == 120 and coords[1] == 45, "Wrong coordinate values.")
         self.assertEqual(state, 'green', "Wrong state value.")
@@ -53,7 +53,7 @@ class TestTrafficLight(unittest.TestCase):
     def test_scene_tl(self):
         test_image = cv2.imread('input_images/test_images/scene_tl_test.png')
         radii_range = range(10, 30, 1)
-        coords, state = assignment1.traffic_light_detection(test_image, radii_range)
+        coords, state = assignment2.traffic_light_detection(test_image, radii_range)
 
         self.assertTrue(coords[0] == 300 and coords[1] == 100, "Wrong coordinate values.")
         self.assertEqual(state, 'red', "Wrong state value.")
@@ -93,7 +93,7 @@ class TestTrafficSigns(unittest.TestCase):
 
     def test_output(self):
         test_image = cv2.imread('input_images/test_images/stop_test.png')
-        result = assignment1.traffic_sign_detection(test_image)
+        result = assignment2.traffic_sign_detection(test_image)
 
         self.assertTrue(result is not None, "Output is NoneType.")
 
@@ -102,19 +102,19 @@ class TestTrafficSigns(unittest.TestCase):
 
     def test_stop_sign(self):
         test_image = cv2.imread('input_images/test_images/stop_test.png')
-        signs = assignment1.traffic_sign_detection(test_image)
+        signs = assignment2.traffic_sign_detection(test_image)
 
         self.check_single_result(signs, (100, 50), 'stop')
 
     def test_construction_sign(self):
         test_image = cv2.imread('input_images/test_images/construction_test.png')
-        signs = assignment1.traffic_sign_detection(test_image)
+        signs = assignment2.traffic_sign_detection(test_image)
 
         self.check_single_result(signs, (100, 100), 'construction')
 
     def test_some_signs(self):
         test_image = cv2.imread('input_images/test_images/scene_some_signs.png')
-        signs = assignment1.traffic_sign_detection(test_image)
+        signs = assignment2.traffic_sign_detection(test_image)
 
         ref_results = {'no_entry': (635, 435), 'stop': (549, 149), 'warning': (300, 350)}
 
@@ -124,7 +124,7 @@ class TestTrafficSigns(unittest.TestCase):
 
     def test_all_signs(self):
         test_image = cv2.imread('input_images/test_images/scene_all_signs.png')
-        signs = assignment1.traffic_sign_detection(test_image)
+        signs = assignment2.traffic_sign_detection(test_image)
 
         ref_results = {'no_entry': (235, 335), 'stop': (349, 349), 'traffic_light': (115, 340), 'warning': (800, 350),
                        'yield': (508, 350), 'construction': (650, 350)}
@@ -135,7 +135,7 @@ class TestTrafficSigns(unittest.TestCase):
 
     def test_noisy_signs(self):
         test_image = cv2.imread('input_images/test_images/noisy_scene_all_signs.png')
-        signs = assignment1.traffic_sign_detection(test_image)
+        signs = assignment2.traffic_sign_detection(test_image)
 
         ref_results = {'no_entry': (235, 335), 'stop': (349, 349), 'traffic_light': (115, 340), 'warning': (800, 350),
                        'yield': (508, 350), 'construction': (650, 350)}

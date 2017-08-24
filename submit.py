@@ -27,16 +27,16 @@ def require_pledges():
 
 def main():
     parser = argparse.ArgumentParser(description='Submits code to the Udacity site.')
-    parser.add_argument('part', choices=['assignment1', 'assignment1_report'])
+    parser.add_argument('part', choices=['assignment2', 'assignment2_report'])
     args = parser.parse_args()
 
     quiz = args.part
     course = "cs6476"
 
-    if quiz == "assignment1":
-        filenames = ["assignment1.py"]
+    if quiz == "assignment2":
+        filenames = ["assignment2.py"]
     else:
-        filenames = ['assignment1_report.pdf', 'experiment.py']
+        filenames = ['assignment2_report.pdf', 'experiment.py']
 
     require_pledges()
 
