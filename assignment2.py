@@ -1,5 +1,5 @@
 """
-CS6476 Assignment 1 imports. Only Numpy and cv2 are allowed.
+CS6476 Assignment 2 imports. Only Numpy and cv2 are allowed.
 """
 import cv2
 import numpy as np
