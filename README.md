@@ -10,15 +10,15 @@ If necessary install the pypi package called "nelson" by running:
 
 ## Setup
 Clone this repository:
-`git clone https://github.gatech.edu/omscs6476/assignment2.git`
+`git clone https://github.gatech.edu/omscs6476/ps02.git`
 
 ## Instructions
 
 See this assignment's Piazza post.
 
 ## Submission
-Submit assignment2.py to the autograder:
-`python submit.py assignment2`
+Submit ps02.py to the autograder:
+`python submit.py ps02`
 
-Submit assignment2_report.pdf and experiment.py:
-`python submit.py assignment2_report`
+Submit ps02_report.pdf and experiment.py:
+`python submit.py ps02_report`

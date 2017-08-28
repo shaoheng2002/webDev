@@ -8,7 +8,7 @@ can verify your results.
 
 import cv2
 
-import assignment2
+import ps2
 
 
 def draw_tl_center(image_in, center, state):
@@ -59,7 +59,7 @@ def part_1a():
     # Define a radii range, you may define a smaller range based on your observations.
     radii_range = range(20, 40, 1)
 
-    coords, state = assignment2.traffic_light_detection(simple_tl, radii_range)
+    coords, state = ps2.traffic_light_detection(simple_tl, radii_range)
 
     simple_tl_output = draw_tl_center(simple_tl, coords, state)
 
@@ -76,7 +76,7 @@ def part_1b():
     # Radii range used by the autograder
     radii_range = range(20, 40, 1)
 
-    coords, state = assignment2.traffic_light_detection(scene_tl_1, radii_range)
+    coords, state = ps2.traffic_light_detection(scene_tl_1, radii_range)
 
     scene_tl_1_output = draw_tl_center(scene_tl_1, coords, state)
 
@@ -87,7 +87,7 @@ def part_1b():
 
     radii_range = range(20, 40, 1)
 
-    coords, state = assignment2.traffic_light_detection(scene_tl_2, radii_range)
+    coords, state = ps2.traffic_light_detection(scene_tl_2, radii_range)
 
     scene_tl_2_output = draw_tl_center(scene_tl_2, coords, state)
 
@@ -98,7 +98,7 @@ def part_2a():
 
     scene_some_signs = cv2.imread("input_images/scene_some_signs.png")
 
-    signs = assignment2.traffic_sign_detection(scene_some_signs)
+    signs = ps2.traffic_sign_detection(scene_some_signs)
 
     scene_some_signs_output = mark_traffic_signs(signs)
 
@@ -108,7 +108,7 @@ def part_2a():
 def part_2b():
     scene_all_signs = cv2.imread("input_images/scene_all_signs.png")
 
-    signs = assignment2.traffic_sign_detection(scene_all_signs)
+    signs = ps2.traffic_sign_detection(scene_all_signs)
 
     scene_all_signs_output = mark_traffic_signs(signs)
 
@@ -118,7 +118,7 @@ def part_2b():
 def part_3():
     noisy_scene_all_signs = cv2.imread("input_images/noisy_scene_all_signs.png")
 
-    signs = assignment2.traffic_sign_detection(noisy_scene_all_signs)
+    signs = ps2.traffic_sign_detection(noisy_scene_all_signs)
 
     noisy_scene_all_signs_output = mark_traffic_signs(signs)
 
