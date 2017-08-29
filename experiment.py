@@ -1,8 +1,8 @@
 """
 CS6476: Assignment 1 Experiment file
 
-This script consists in a series of function calls that run the assignment1 implementation and output images so you
-can verify your results.
+This script contains a series of function calls that run your ps2 implementation
+and output images so you can verify your results.
 """
 
 
@@ -12,10 +12,12 @@ import ps2
 
 
 def draw_tl_center(image_in, center, state):
-    """Marks the center of a traffic light image and adds coordinates with the state of the current image
+    """ Marks the center of a traffic light image and adds coordinates with the
+    state of the current image
 
-    Use OpenCV drawing functions to place a marker that represents the traffic light center. Additionally, place text
-    using OpenCV tools that show the numerical and string values of the traffic light center and state. Use the
+    Use OpenCV drawing functions to place a marker that represents the traffic
+    light center. Additionally, place text using OpenCV tools that show the
+    numerical and string values of the traffic light center and state. Use the
     following format:
 
         ((x-coordinate, y-coordinate), 'color')
@@ -23,17 +25,17 @@ def draw_tl_center(image_in, center, state):
     See OpenCV's drawing functions:
     http://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html
 
-    Make sure the font size is large enough so that the text in the output image is legible.
-
+    Make sure the font size is large enough so that the text in the output image
+    is legible.
     Args:
         image_in (numpy.array): input image.
         center (tuple): center numeric values.
         state (str): traffic light state values can be: 'red', 'yellow', 'green'.
 
     Returns:
-        numpy.array: output image showing a marker representing the traffic light center and text that presents the
-                     numerical coordinates with the traffic light state.
-
+        numpy.array: output image showing a marker representing the traffic
+        light center and text that presents the numerical coordinates with
+        the traffic light state.
     """
     pass
 
@@ -42,7 +44,8 @@ def mark_traffic_signs(signs_dict):
     """Marks the center of a traffic sign adding
 
     Args:
-        signs_dict (dict): dictionary containing the coordinates of each sign found in a scene.
+        signs_dict (dict): dictionary containing the coordinates of each sign
+        found in a scene.
 
     Returns:
         numpy.array: output image showing markers on each traffic sign.
@@ -53,7 +56,8 @@ def mark_traffic_signs(signs_dict):
 
 def part_1a():
 
-    # Start by loading a simple image with only one traffic sign in a white background.
+    # Start by loading a simple image with one traffic sign on a white
+    # background.
     simple_tl = cv2.imread("input_images/simple_tl.png")
 
     # Define a radii range, you may define a smaller range based on your observations.
