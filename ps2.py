@@ -4,8 +4,6 @@ CS6476 Assignment 2 imports. Only Numpy and cv2 are allowed.
 import cv2
 import numpy as np
 
-from enum import Enum
-
 def traffic_light_detection(img_in, radii_range):
     """Finds the coordinates of a traffic light image given a radii range.
 
@@ -29,15 +27,41 @@ def traffic_light_detection(img_in, radii_range):
         coordinates (tuple): traffic light center using the (x, y) convention.
         state (str): traffic light state. A value in {'red', 'yellow', 'green'}
     """
-    class States(Enum):
-        RED = 'red'
-        YELLOW = 'yellow'
-        GREEN = 'green'
-        
     raise NotImplementedError
 
+def yield_sign_detection(img_in):
+    """
+    Find the coordinates of a yield sign in the provided image
+    :param img_in:
+    :return: (x,y) tuple of coordinates of the center of the yield sign.
+    """
+    raise NotImplementedError
 
-def traffic_sign_detection(img_in):
+def stop_sign_detection(img_in):
+    """
+    Find the coordinates of a stop sign in the provided image
+    :param img_in:
+    :return: (x,y) tuple of the coordinates of the center of the stop sign
+    """
+    raise NotImplementedError
+
+def warning_sign_detection(img_in):
+    """
+    Find the coordinates of a warning sign in the provided image
+    :param img_in:
+    :return: (x,y) tuple of the coordinates of the center of the sign
+    """
+    raise NotImplementedError
+
+def do_not_enter_sign_detection(img_in):
+    """
+    Find the coordinates of a do not enter sign in the provided image
+    :param img_in:
+    :return: (x,y) typle of the coordinates of the center of the sign
+    """
+    raise NotImplementedError
+
+def sign_detection_detection(img_in):
     """Finds all traffic signs in a given image.
 
     The image may contain at least one of the following:
