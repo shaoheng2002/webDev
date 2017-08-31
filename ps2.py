@@ -61,7 +61,7 @@ def do_not_enter_sign_detection(img_in):
     """
     raise NotImplementedError
 
-def sign_detection_detection(img_in):
+def traffic_sign_detection(img_in):
     """Finds all traffic signs in a given image.
 
     The image may contain at least one of the following:
