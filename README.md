@@ -1,4 +1,4 @@
-# Assignment 2: Traffic Signs and Lights
+# Problem Set 2: Traffic Signs and Lights
 
 ## Description
 
@@ -20,5 +20,5 @@ See this assignment's Piazza post.
 Submit ps02.py to the autograder:
 `python submit.py ps02`
 
-Submit ps02_report.pdf and experiment.py:
+Submit ps02_report.pdf, challenge images, and experiment.py:
 `python submit.py ps02_report`
