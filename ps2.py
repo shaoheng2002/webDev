@@ -104,7 +104,7 @@ def traffic_sign_detection(img_in):
     Returns:
         dict: dictionary containing only the signs present in the image along
               with their respective coordinates as tuples.
-              For example: {'stop': [(1, 3)], 'yield': (4, 11)}
+              For example: {'stop': (1, 3), 'yield': (4, 11)}
               These are just example values and may not represent a valid scene.
     """
 
@@ -130,7 +130,7 @@ def traffic_sign_detection_noisy(img_in):
     Returns:
         dict: dictionary containing only the signs present in the image along
               with their respective coordinates as tuples.
-              For example: {'stop': [(1, 3)], 'yield': (4, 11)}
+              For example: {'stop': (1, 3), 'yield': (4, 11)}
               These are just example values and may not represent a valid scene.
     """
 
@@ -147,7 +147,7 @@ def traffic_sign_detection_challenge(img_in):
     Returns:
         dict: dictionary containing only the signs present in the image along
               with their respective coordinates as tuples.
-              For example: {'stop': [(1, 3)], 'yield': (4, 11)}
+              For example: {'stop': (1, 3), 'yield': (4, 11)}
               These are just example values and may not represent a valid scene.
     """
 
