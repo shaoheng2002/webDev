@@ -35,9 +35,9 @@ def main():
     course = "cs6476"
 
     if quiz == "ps02":
-        filenames = ["ps02.py"]
+        filenames = ["ps2.py"]
     else:
-        filenames = ["ps02.py", "ps02_report.pdf", "experiment.py",
+        filenames = ["ps2.py", "ps2_report.pdf", "experiment.py",
                      "img-5-a-1.png", "img-5-a-2.png", "img-5-a-3.png",
                      "img-5-b-1.png", "img-5-b-2.png", "img-5-b-3.png"]
 
