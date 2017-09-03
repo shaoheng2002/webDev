@@ -32,37 +32,60 @@ def traffic_light_detection(img_in, radii_range):
 def yield_sign_detection(img_in):
     """
     Find the coordinates of a yield sign in the provided image
-    :param img_in:
-    :return: (x,y) tuple of coordinates of the center of the yield sign.
+    Args:
+        img_in (numpy.array): image containing a traffic light.
+
+    Returns:
+        (x,y) tuple of coordinates of the center of the yield sign.
     """
     raise NotImplementedError
 
 def stop_sign_detection(img_in):
     """
     Find the coordinates of a stop sign in the provided image
-    :param img_in:
-    :return: (x,y) tuple of the coordinates of the center of the stop sign
+    Args:
+        img_in (numpy.array): image containing a traffic light.
+
+    Returns:
+        (x,y) tuple of the coordinates of the center of the stop sign
     """
     raise NotImplementedError
 
 def warning_sign_detection(img_in):
     """
     Find the coordinates of a warning sign in the provided image
-    :param img_in:
-    :return: (x,y) tuple of the coordinates of the center of the sign
+    Args:
+        img_in (numpy.array): image containing a traffic light.
+
+    Returns:
+        (x,y) tuple of the coordinates of the center of the sign
+    """
+    raise NotImplementedError
+
+def construction_sign_detection(img_in):
+    """
+    Find the coordinates of a construction sign in the provided image
+    Args:
+        img_in (numpy.array): image containing a traffic light.
+
+    Returns:
+        (x,y) tuple of the coordinates of the center of the sign
     """
     raise NotImplementedError
 
 def do_not_enter_sign_detection(img_in):
     """
     Find the coordinates of a do not enter sign in the provided image
-    :param img_in:
-    :return: (x,y) typle of the coordinates of the center of the sign
+    Args:
+        img_in (numpy.array): image containing a traffic light.
+
+    Returns:
+        (x,y) typle of the coordinates of the center of the sign
     """
     raise NotImplementedError
 
 def traffic_sign_detection(img_in):
-    """Finds all traffic signs in a given image.
+    """Finds all traffic signs in a synthetic image.
 
     The image may contain at least one of the following:
     - traffic_light
@@ -74,6 +97,49 @@ def traffic_sign_detection(img_in):
 
     Use these names for your output.
     See the instructions document for a visual definition of each sign.
+
+    Args:
+        img_in (numpy.array): input image containing at least one traffic sign.
+
+    Returns:
+        dict: dictionary containing only the signs present in the image along
+              with their respective coordinates as tuples.
+              For example: {'stop': [(1, 3)], 'yield': (4, 11)}
+              These are just example values and may not represent a valid scene.
+    """
+
+    raise NotImplementedError
+
+def traffic_sign_detection_noisy(img_in):
+    """Finds all traffic signs in a synthetic noisy image.
+
+    The image may contain at least one of the following:
+    - traffic_light
+    - no_entry
+    - stop
+    - warning
+    - yield
+    - construction
+
+    Use these names for your output.
+    See the instructions document for a visual definition of each sign.
+
+    Args:
+        img_in (numpy.array): input image containing at least one traffic sign.
+
+    Returns:
+        dict: dictionary containing only the signs present in the image along
+              with their respective coordinates as tuples.
+              For example: {'stop': [(1, 3)], 'yield': (4, 11)}
+              These are just example values and may not represent a valid scene.
+    """
+
+    raise NotImplementedError
+
+def traffic_sign_detection_challenge(img_in):
+    """Finds traffic signs in an real image
+
+    See point 5 in the instructions for details.
 
     Args:
         img_in (numpy.array): input image containing at least one traffic sign.
