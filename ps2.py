@@ -39,7 +39,8 @@ def traffic_light_detection(img_in, radii_range):
 
 
 def yield_sign_detection(img_in):
-    """Finds the coordinates of a yield sign in the provided image.
+    """Finds the centroid coordinates of a yield sign in the provided
+    image.
 
     Args:
         img_in (numpy.array): image containing a traffic light.
@@ -51,7 +52,8 @@ def yield_sign_detection(img_in):
 
 
 def stop_sign_detection(img_in):
-    """Finds the coordinates of a stop sign in the provided image.
+    """Finds the centroid coordinates of a stop sign in the provided
+    image.
 
     Args:
         img_in (numpy.array): image containing a traffic light.
@@ -63,7 +65,8 @@ def stop_sign_detection(img_in):
 
 
 def warning_sign_detection(img_in):
-    """Finds the coordinates of a warning sign in the provided image.
+    """Finds the centroid coordinates of a warning sign in the
+    provided image.
 
     Args:
         img_in (numpy.array): image containing a traffic light.
@@ -75,8 +78,8 @@ def warning_sign_detection(img_in):
 
 
 def construction_sign_detection(img_in):
-    """Finds the coordinates of a construction sign in the provided
-    image.
+    """Finds the centroid coordinates of a construction sign in the
+    provided image.
 
     Args:
         img_in (numpy.array): image containing a traffic light.
@@ -88,8 +91,8 @@ def construction_sign_detection(img_in):
 
 
 def do_not_enter_sign_detection(img_in):
-    """Find the coordinates of a do not enter sign in the provided
-    image.
+    """Find the centroid coordinates of a do not enter sign in the
+    provided image.
 
     Args:
         img_in (numpy.array): image containing a traffic light.
@@ -112,6 +115,7 @@ def traffic_sign_detection(img_in):
     - construction
 
     Use these names for your output.
+
     See the instructions document for a visual definition of each
     sign.
 
@@ -121,7 +125,9 @@ def traffic_sign_detection(img_in):
 
     Returns:
         dict: dictionary containing only the signs present in the
-              image along with their respective coordinates as tuples.
+              image along with their respective centroid coordinates
+              as tuples.
+
               For example: {'stop': (1, 3), 'yield': (4, 11)}
               These are just example values and may not represent a
               valid scene.
@@ -141,6 +147,7 @@ def traffic_sign_detection_noisy(img_in):
     - construction
 
     Use these names for your output.
+
     See the instructions document for a visual definition of each
     sign.
 
@@ -150,7 +157,9 @@ def traffic_sign_detection_noisy(img_in):
 
     Returns:
         dict: dictionary containing only the signs present in the
-              image along with their respective coordinates as tuples.
+              image along with their respective centroid coordinates
+              as tuples.
+
               For example: {'stop': (1, 3), 'yield': (4, 11)}
               These are just example values and may not represent a
               valid scene.
@@ -169,7 +178,9 @@ def traffic_sign_detection_challenge(img_in):
 
     Returns:
         dict: dictionary containing only the signs present in the
-              image along with their respective coordinates as tuples.
+              image along with their respective centroid coordinates
+              as tuples.
+
               For example: {'stop': (1, 3), 'yield': (4, 11)}
               These are just example values and may not represent a
               valid scene.
