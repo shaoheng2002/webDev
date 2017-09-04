@@ -41,7 +41,7 @@ def draw_tl_center(image_in, center, state):
     raise NotImplementedError
 
 
-def mark_traffic_signs(signs_dict):
+def mark_traffic_signs(image_in, signs_dict):
     """Marks the center of a traffic sign and adds its coordinates.
 
     This function uses a dictionary that follows the following
@@ -55,6 +55,7 @@ def mark_traffic_signs(signs_dict):
     image.
 
     Args:
+        image_in (numpy.array): the image to draw on.
         signs_dict (dict): dictionary containing the coordinates of
         each sign found in a scene.
 
@@ -104,7 +105,7 @@ def part_2():
         coords = fn(sign_img)
 
         temp_dict = {name: coords}
-        img_out = mark_traffic_signs(temp_dict)
+        img_out = mark_traffic_signs(sign_img, temp_dict)
         cv2.imwrite("output/{}.png".format(label), img_out)
 
 
@@ -118,7 +119,7 @@ def part_3():
         scene = cv2.imread("input_images/{}.png".format(img_in))
         coords = ps2.traffic_sign_detection(scene)
 
-        img_out = mark_traffic_signs(coords)
+        img_out = mark_traffic_signs(scene, coords)
         cv2.imwrite("output/{}.png".format(label), img_out)
 
 
@@ -130,7 +131,7 @@ def part_4():
         scene = cv2.imread("input_images/{}.png".format(img_in))
         coords = ps2.traffic_sign_detection_noisy(scene)
 
-        img_out = mark_traffic_signs(coords)
+        img_out = mark_traffic_signs(scene, coords)
         cv2.imwrite("output/{}.png".format(label), img_out)
 
 
@@ -142,7 +143,7 @@ def part_5a():
         scene = cv2.imread("input_images/{}.png".format(img_in))
         coords = ps2.traffic_sign_detection_challenge(scene)
 
-        img_out = mark_traffic_signs(coords)
+        img_out = mark_traffic_signs(scene, coords)
         cv2.imwrite("output/{}.png".format(label), img_out)
 
 
@@ -154,7 +155,7 @@ def part_5b():
         scene = cv2.imread("input_images/{}.png".format(img_in))
         coords = ps2.traffic_sign_detection_challenge(scene)
 
-        img_out = mark_traffic_signs(coords)
+        img_out = mark_traffic_signs(scene, coords)
         cv2.imwrite("output/{}.png".format(label), img_out)
 
 if __name__ == '__main__':
