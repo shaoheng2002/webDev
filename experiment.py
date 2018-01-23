@@ -49,7 +49,7 @@ def mark_traffic_signs(image_in, signs_dict):
     {'sign_name_1': (x, y), 'sign_name_2': (x, y), etc.}
 
     Where 'sign_name' can be: 'stop', 'no_entry', 'yield',
-    'construction', and 'warning'.
+    'construction', 'warning', and 'traffic_light'.
 
     Use cv2.putText to place the coordinate values in the output
     image.
