@@ -1,0 +1,21 @@
+.form-container{
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.pageTitle{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#regForm label.error {
+    padding-left: 16px;
+    margin-left: 2px;
+    color: red;
+    font-size: x-small;
+}
+#formLogin label.error {
+    padding-left: 16px;
+    margin-left: 2px;
+    color: red;
+    font-size: x-small;
+}
