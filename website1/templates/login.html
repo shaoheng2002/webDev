@@ -1,0 +1,55 @@
+{% extends 'base.html'  %}
+{%  block title %}
+Login
+{%  endblock title%}
+
+{%  block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+{%  endblock head%}
+
+{%  block main %}
+
+
+<form action="" method="POST" id="formLogin">
+    <div class="form-container">
+        <h3 class="pageTitle"> Login</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Phone Number" name="phone">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" name="password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" id="submitLogin">Login</button>
+        </div>
+    </div>
+</form>
+<script>
+    $(function () {
+        $('#formLogin').validate({
+            rules:{
+                phone: {
+                    required: true,
+                    minlength:8,
+                    maxlenth:11
+                },
+                password: 'required'
+            },
+            messages:{
+                phone: {
+                    required: "Phone number can not be empty!",
+                    minlength:"The minmum length is 8",
+                    maxlenth:"The maximum length is 11"
+                },
+                password: 'Password can not be empty!'
+            }
+
+        });
+        $('#submitLogin').on('click', function () {
+           if (!$('#formLogin').valid()){
+               return false;
+           }
+        });
+    })
+</script>
+{%  endblock main%}

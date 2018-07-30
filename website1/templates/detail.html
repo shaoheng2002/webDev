@@ -1,0 +1,39 @@
+{% extends 'base.html'  %}
+{%  block title %}
+Detail Page
+{%  endblock title%}
+
+{%  block head %}
+{%  endblock head %}
+
+{%  block main %}
+<h3 class=page-title style="text-align: center; margin-bottom:20px">{{ question.title }}</h3>
+<p style="text-align: center"><span><strong>Author:</strong> {{question.author.username }}</span><span style="margin-left:20px"><strong>Time:</strong> {{ question.create_time }}</span></p>
+<hr>
+<p class="question-content" style="padding: 20px">{{   question.content }}</p>
+<hr>
+<h4 style="padding: 20px">Comment ({{ question.question|length }}):</h4>
+<form action="{{ url_for('add_comment') }}" method="POST">
+        <div class="form-group" style="padding: 20px">
+            <input type="text" class="form-control" placeholder="Please input your comment" name="comment_content">
+            <input type="hidden" name="question_id" value="{{ question.id }}">
+        </div>
+    <div class="form-group" style="text-align:right; padding: 20px;">
+        <button class="btn btn-primary">Comment</button>
+    </div>
+</form>
+<hr>
+<ul>
+    {% for comment in question.question %}
+    <li style="border-bottom: 1px solid #eeeeee; list-style: none">
+        <div class="user-info" style="padding: 20px; font-size: 16px; color: #9b9b9b">
+            <img class="avatar" src="{{ url_for('static', filename='img/LOGO1.png')}}" alt="" style="width: 70px; height: 32px;border-radius:50%">
+            <span class="create_time" style="float: right;">{{ comment.create_time }} </span>
+            <span class="username" style="text-align: left; margin-right: 20px">{{ comment.comment_author.username }} </span>
+        </div>
+        <p class="comment-content" style="text-align: left; margin-left: 90px">{{ comment.comment }}</p>
+    </li>
+    {% endfor %}
+</ul>
+<div class="footer" style="padding:50px"></div>
+{%  endblock main %}
