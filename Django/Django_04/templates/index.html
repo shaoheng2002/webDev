@@ -1,0 +1,21 @@
+{%  extends 'base.html' %}
+{% block content %}
+    <table class="table table-bordered table-hover  ">
+    <thead>
+    <tr>
+        <th scope="col">序号</th>
+        <th scope="col">书名</th>
+        <th scope="col">作者</th>
+    </tr>
+    </thead>
+    <tbody class="table-striped">
+    {% for book in books %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a href="{%  url 'book_detail' book_id=book.0 %}">{{ book.1 }}</a></td>
+            <td>{{ book.2 }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

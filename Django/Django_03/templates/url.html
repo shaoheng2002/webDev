@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL_DEMO</title>
+    <style>
+        .nav{
+            overflow: hidden;
+            list-style: none;
+        }
+        .nav li{
+            float: left;
+            margin:0 20px;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <a href="{% url 'index' %}"><li>HomePage</li></a>
+    <a href="{% url 'read' %}"><li>Read</li></a>
+    <a href="{% url 'movie' %}"><li>Movie</li></a>
+    <a href="{% url 'find' %}"><li>Find</li></a>
+</ul>
+</body>
+</html>

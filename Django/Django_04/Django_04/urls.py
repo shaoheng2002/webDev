@@ -1,4 +1,4 @@
-"""Django_01 URL Configuration
+"""Django_04 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -13,14 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
+from front import views
 
-from book import views
 urlpatterns = [
-    path('', views.index),
-    path('admin/', admin.site.urls),
-    path('book/', views.book),
-    path('author/', views.author_detail),
-    path('book/detail/<book_id>', views.book_detail)
+    path('', views.index, name='index'),
+    path('add_book', views.add_book, name='add_book'),
+    path('book_detail/<int:book_id>/', views.book_detail, name='book_detail'),
+    path('delete_book/', views.delete_book, name='delete_book')
 ]

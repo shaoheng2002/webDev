@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+<h1>This is from template</h1>
+<h2>{{ text }}</h2>
+<h2> Today is {{ date|date:"Y/m/d" }}</h2>
+
+{% if age > 18 %}
+    <h2> you can enter into the website</h2>
+{% else %}
+    <h2> you canot enter into the website</h2>
+{% endif %}
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<ul>
+    {% for l in list reversed  %}
+        <li>{{ l }}</li>
+    {% endfor %}
+</ul>
+<ul>
+    {% for website in websites  %}
+        <li>{{ website }}</li>
+    {% endfor %}
+</ul>
+
+
+</body>
+</html>

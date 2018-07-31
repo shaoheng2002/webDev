@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    background: #3a3a3a;
+    height: 65px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.nav li{
+    float: left;
+    margin-left: 20px;
+    line-height: 65px;
+}
+
+.nav li a{
+    color:white;
+}
+.nav li a:hover{
+    color:lightblue;
+}
+.form-book{
+    margin-top: 30px;
+}
+.book_detail{
+    text-align: center;
+}
+#deleteForm{
+    padding: 30px;
+    text-align: center;
+}
